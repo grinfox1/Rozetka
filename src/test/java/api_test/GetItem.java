@@ -1,13 +1,13 @@
 package api_test;
 
-import api.model.GetItemResponse;
+import api.model.response.GetItemResponse;
 import api.model.request.GetItemRequest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
-import api.model.ErrorResponse;
+import api.model.response.ErrorResponse;
 import org.testng.asserts.SoftAssert;
 
 import static org.assertj.core.api.Assertions.assertThat;

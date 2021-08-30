@@ -1,39 +1,30 @@
-package api.model;
+package api.model.request;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-public class ResultItem {
-
-    @SerializedName("id")
-    private String id;
+public class CreateItemRequest {
     @SerializedName("name")
+    @Expose
     private String name;
     @SerializedName("section")
+    @Expose
     private String section;
     @SerializedName("description")
+    @Expose
     private String description;
     @SerializedName("color")
+    @Expose
     private String color;
     @SerializedName("size")
-    private String size;
+    @Expose
+    private Integer size;
     @SerializedName("price")
+    @Expose
     private Integer price;
     @SerializedName("params")
+    @Expose
     private String params;
-    @SerializedName("photo")
-    private String photo;
-    @SerializedName("photos")
-    private List<String> photos = null;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -67,11 +58,11 @@ public class ResultItem {
         this.color = color;
     }
 
-    public String getSize() {
+    public Integer getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(Integer size) {
         this.size = size;
     }
 
@@ -89,22 +80,6 @@ public class ResultItem {
 
     public void setParams(String params) {
         this.params = params;
-    }
-
-    public String getPhoto() {
-        return photo;
-    }
-
-    public void setPhoto(String photo) {
-        this.photo = photo;
-    }
-
-    public List<String> getPhotos() {
-        return photos;
-    }
-
-    public void setPhotos(List<String> photos) {
-        this.photos = photos;
     }
 
 }

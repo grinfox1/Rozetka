@@ -1,15 +1,19 @@
-package api.model;
+package api.model.response;
 
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class GetItemResponse {
+public class CreateItemResponse {
 
     @SerializedName("method")
+    @Expose
     private String method;
     @SerializedName("status")
+    @Expose
     private String status;
     @SerializedName("result")
-    private ResultItem result;
+    @Expose
+    private CreateResult result;
 
     public String getMethod() {
         return method;
@@ -27,11 +31,11 @@ public class GetItemResponse {
         this.status = status;
     }
 
-    public ResultItem getResult() {
+    public CreateResult getCreateResult() {
         return result;
     }
 
-    public void setResult(ResultItem result) {
+    public void setCreateResult(CreateResult result) {
         this.result = result;
     }
 

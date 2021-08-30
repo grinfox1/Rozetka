@@ -3,6 +3,7 @@ package ui.main_page_test;
 import driver.Driver;
 import helpers.HeaderHelper;
 import helpers.SearchResultHelper;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -26,11 +27,13 @@ public class MainPageTest {
         driver.get(URL);
     }
 
+    @Step
     @Test
     public void checkUrl() {
         Assert.assertEquals(driver.getCurrentUrl(), URL);
     }
 
+    @Step
     @Test
     public void checkSearch() {
         String searchText = "телефон1";
@@ -39,7 +42,7 @@ public class MainPageTest {
         boolean result = false;
         for (String item: titles) {
             if(!item.contains(searchText)){
-                result = false;
+                result = true;
                 break;
             }
             result = true;
