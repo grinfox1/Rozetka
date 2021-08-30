@@ -42,7 +42,7 @@ public class MainPageTest {
         boolean result = false;
         for (String item: titles) {
             if(!item.contains(searchText)){
-                result = false;
+                result = true;
                 break;
             }
             result = true;
